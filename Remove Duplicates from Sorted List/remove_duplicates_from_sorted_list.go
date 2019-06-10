@@ -1,8 +1,11 @@
 package Remove_Duplicates_from_Sorted_List
 
-import "github.com/naoki-kishi/leetcode/Linked List Cycle"
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
-func deleteDuplicates(head *Linked_List_Cycle.ListNode) *Linked_List_Cycle.ListNode {
+func deleteDuplicates(head *ListNode) *ListNode {
 	seen := map[int]bool{}
 
 	if head == nil {
